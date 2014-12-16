@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Stock Display</title>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="./draw.js"></script>
+</head>
+<body>
+	<span>stock number:</span>
+	<input type="number" min="600000" max="602000" id="stockNumber"></input><input type="button" id="selectStock" />
+	<canvas id="origin" height="500" width="20000" style="border:1px solid #c3c3c3;"></canvas>
+	<canvas id="smooth1" height="500" width="20000" style="border:1px solid #c3c3c3;"></canvas>
+	<canvas id="smooth2" height="500" width="20000" style="border:1px solid #c3c3c3;"></canvas>
+</body>
+</html>
