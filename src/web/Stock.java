@@ -48,8 +48,8 @@ public class Stock extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String stockNumber = request.getParameter("stock");
 		StockResultDto ori = fetchData("d:\\stock\\origin\\" + stockNumber + ".csv", DATE_INDEX, END_PRICE_INDEX);
-		StockResultDto sm1 = fetchData("d:\\stock\\smooth1\\" + stockNumber + ".csv", DATE_INDEX, 1);
-		StockResultDto sm2 = fetchData("d:\\stock\\smooth2\\" + stockNumber + ".csv", DATE_INDEX, 1);
+		StockResultDto sm1 = fetchData("d:\\stock\\smooth2\\" + stockNumber + ".csv", DATE_INDEX, 1);
+		StockResultDto sm2 = fetchData("d:\\stock\\smooth3\\" + stockNumber + ".csv", DATE_INDEX, 1);
 		List<StockResultDto> resultDtos = new ArrayList<StockResultDto>();
 		resultDtos.add(ori);
 		resultDtos.add(sm1);

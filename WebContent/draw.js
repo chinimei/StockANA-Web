@@ -2,7 +2,7 @@
 	var height = 500;
 	
 	convertPriceToY = function(price, max, min) {
-		var y = (price - min)*height/(max-min);
+		var y = height - (price - min)*height/(max-min);
 		return y;
 	};
 	
@@ -13,6 +13,8 @@
 		var ctx = canvas.getContext("2d");
 
 		ctx.clearRect ( 0 , 0 , canvas.width, canvas.height );
+		
+		stocks.reverse();
 		
 		ctx.beginPath();
 		ctx.moveTo(0, convertPriceToY(stocks[0].price, max, min));
